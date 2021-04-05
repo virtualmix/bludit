@@ -2,9 +2,9 @@
 	"author": "EasyMDE",
 	"email": "",
 	"website": "https://easymde.tk",
-	"version": "2.8.0",
-	"releaseDate": "2019-08-20",
+	"version": "2.12.0",
+	"releaseDate": "2020-09-29",
 	"license": "MIT",
-	"compatible": "3.12.0",
+	"compatible": "3.13.1",
 	"notes": ""
 }

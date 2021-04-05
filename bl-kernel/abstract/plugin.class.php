@@ -6,11 +6,11 @@ class Plugin {
 	// Ex: sitemap
 	public $directoryName;
 
-	// (string) Absoulute database filename and path
+	// (string) Absolute database filename and path
 	// Ex: /www/bludit/bl-content/plugins/sitemap/db.php
 	public $filenameDb;
 
-	// (string) Absoulute metadata filename and path
+	// (string) Absolute metadata filename and path
 	// Ex: /www/bludit/bl-plugins/sitemap/metadata.json
 	public $filenameMetadata;
 
@@ -66,6 +66,7 @@ class Plugin {
 		if ($this->installed()) {
 			$Tmp = new dbJSON($this->filenameDb);
 			$this->db = $Tmp->db;
+			$this->prepare();
 		}
 	}
 
@@ -112,7 +113,7 @@ class Plugin {
 		return PATH_PLUGINS_DATABASES.$this->directoryName.DS;
 	}
 
-	// Returns the value of the key from the metadata of the plugin, FALSE if the key doen't exit
+	// Returns the value of the key from the metadata of the plugin, FALSE if the key doesn't exist
 	public function getMetadata($key)
 	{
 		if(isset($this->metadata[$key])) {
@@ -270,8 +271,14 @@ class Plugin {
 
 	public function init()
 	{
-		// This method is used on childre classes.
+		// This method is used on children classes
 		// The user can define his own field of the database
+	}
+
+	public function prepare()
+	{
+		// This method is used on children classes
+		// The user can prepare the plugin, when it is installed
 	}
 
 	public function post()

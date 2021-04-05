@@ -13,6 +13,14 @@ Bludit supports **Markdown** and **HTML code** for the content.
 - [Documentation](https://docs.bludit.com)
 - Help and Support [Forum](https://forum.bludit.org) and [Chat](https://gitter.im/bludit/support)
 
+Bludit v4
+---------------
+I'm working on Bludit v4 but I don't have an ETA for the first alpha or beta version. You can follow the changes in the new branch `v4.0` and in the blog post [Bludit v4 Road map](https://blog.bludit.com/bludit-4-road-map).
+
+I'm doing a big refactor of Bludit's core so please be patient and let me release an Alpha version before push changes to the branch `v4.0`.
+
+Feedback and ideas are welcome, you can create an `issue` with the request; Please provide some examples of the idea in the `issue`.
+
 Follow Bludit
 ---------------
 
@@ -26,7 +34,7 @@ Requirements
 
 You just need a web server with PHP support.
 
-- PHP v5.6 or higher.
+- PHP v5.6 or higher version.
 - PHP [mbstring](http://php.net/manual/en/book.mbstring.php) module for full UTF-8 support.
 - PHP [gd](http://php.net/manual/en/book.image.php) module for image processing.
 - PHP [dom](http://php.net/manual/en/book.dom.php) module for DOM manipulation.
@@ -58,12 +66,18 @@ Bludit is open soruce and free, but if you really like the project and is useful
 
 [![Bludit PRO](https://img.shields.io/badge/Bludit-PRO-blue.svg)](https://pro.bludit.com/)
 
-### Golden sponsors in Patreon!
+### Platinum sponsors in Patreon!
 
 - <a href="https://www.patreon.com/clickwork" target="_blank">Clickwork</a>
 - <a href="https://www.patreon.com/user/creators?u=10331784" target="_blank">KreativMind</a>
-- <a href="https://www.patreon.com/user/creators?u=12261033" target="_blank">Jan Rippl</a>
 - <a href="https://www.patreon.com/user/creators?u=28428918" target="_blank">Curious Activity</a>
+- <a href="https://www.patreon.com/user/creators?u=27476624" target="_blank">Matěj Adámek</a>
+- <a href="https://www.patreon.com/pytesNET/creators" target="_blank">pytesNET</a>
+
+### Golden sponsors in Patreon!
+
+- <a href="https://www.patreon.com/user/creators?u=30876037" target="_blank">Thomas Kreth</a>
+- <a href="https://www.patreon.com/user/creators?u=14629621" target="_blank">Christian</a>
 
 License
 -------

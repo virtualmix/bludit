@@ -265,6 +265,8 @@ class Page {
 		return implode(',', $tags);
 	}
 
+
+
 	public function json($returnsArray=false)
 	{
 		$tmp['key'] 		= $this->key();
@@ -279,6 +281,7 @@ class Page {
 		$tmp['tags'] 		= $this->tags(false);
 		$tmp['username'] 	= $this->username();
 		$tmp['category'] 	= $this->category();
+		$tmp['uuid'] 		= $this->uuid();
 		$tmp['dateUTC']		= Date::convertToUTC($this->dateRaw(), DB_DATE_FORMAT, DB_DATE_FORMAT);
 		$tmp['permalink'] 	= $this->permalink(true);
 		$tmp['coverImage'] 		= $this->coverImage(true);
@@ -581,5 +584,28 @@ class Page {
 			return $this->vars['custom'][$field]['value'];
 		}
 		return false;
+	}
+
+	// Returns an array with all pages key related to the page
+	// The relation is based on the tags
+	public function related() {
+		global $tags;
+		$pageTags = $this->tags(true);
+		$list = array();
+		// For each tag get the list of related pages
+		foreach ($pageTags as $tagKey=>$tagName) {
+			$pagesRelated = $tags->getList($tagKey, 1, -1);
+			$list = array_merge($list, $pagesRelated);
+		}
+
+		// Remove duplicates
+		$list = array_unique($list);
+
+		// Remove himself from the list
+		if (($key = array_search($this->key(), $list)) !== false) {
+			unset($list[$key]);
+		}
+
+		return $list;
 	}
 }
